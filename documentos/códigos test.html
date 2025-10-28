@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Escola Estadual Sanico Teles </title>
+<title>Escola Estadual Sanico Teles</title>
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
 
-  .header {
+   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px;
-    border: 1px solid #000000;
+    border: 1px solid #000;
   }
 
   .left, .right {
@@ -48,8 +48,8 @@
     width: 40%;
     padding: 6px;
     border-radius: 10px;
-    border: 1px;
-    background-color: #000000;
+    border: 1px solid #ccc;
+    background-color: #a1a1a1;
     text-align: center;
   }
 
@@ -62,18 +62,64 @@
     font-weight: bold;
     font-size: 14px;
   }
+
+  .menu {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    border-top: none;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 1px solid #000000;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .menu a:hover {
+    background: #f0f0f0;
+  }
+
   .content {
     display: flex;
     justify-content: center;
     margin-top: 20px;
   }
+
+  .card {
+    text-align: center;
+    max-width: 700px;
+    border: 1px solid white;
+    padding: 20px;
+  }
+
+  details {
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 8px;
+  }
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    margin-top: 60px;
+  }
+  .img {
+    width: 250px;
+    height: 190Px;
+  }
+
 </style>
 </head>
 <body>
 
 <div class="header">
   <div class="left">
-    <img src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
+    <img  src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
     <div class="school-name">Escola Estadual Sanico Teles</div>
   </div>
 
@@ -87,22 +133,46 @@
     <div class="enter">Entrar</div>
   </div>
 </div>
- <div class="content">
-    <div class="card">
-      <div class="topo">
-        <h2>Bem-vindo à Escola Estadual Sanico Teles</h2>
-      </div>
-      <details>
-        <summary>Clique para ver a história da Escola Sanico Teles</summary>
-        <p style="line-height:1.6; margin-top:10px;">
-            A Escola Estadual Sanico Teles foi fundada em 15 de março de 1965, com o objetivo de proporcionareducação de qualidadepara a comunidade local.
-           Ao longo dos anos, a escola tem se destacado por seu compromisso com o ensino e a formação integral dos alunos.
-           Com uma equipe dedicada de professores e funcionários, a escola oferece uma variedade de programas acadêmicos 
-            extracurriculares, promovendo um ambiente de aprendizado inclusivo e estimulante. 
-            A Sanico Teles orgulha-se de sua históriarica e contínua evolução, sempre buscando inovar e atender às necessidades 
-            educacionais da região.
-      </details>
+
+<div class="menu">
+  <a href="#">Home</a>
+  <a href="#">Área Acadêmica</a>
+  <a href="#">Cursos</a>
+  <a href="#">Docentes</a>
+  <a href="#">Projetos</a>
+  <a href="#">Alunos e Pais</a>
+  <a href="#">Fotos e Vídeos</a>
+  <a href="#">Premiações</a>
+  <a href="#">Depoimentos</a>
+  <a href="#">Administração</a>
+  <a href="#">Laboratórios</a>
+</div>
+<div class="gallery">
+  <img class="img" src="https://valeindependente.files.wordpress.com/2016/04/logo-oficial-sanico.jpg?w=148" alt="Imagem 1">
+  <img class="img" src="https://valeindependente.com.br/wp-content/uploads/2025/07/3-2.jpg" alt="Imagem 2">
+  <img class="img" src="https://valeindependente.com.br/wp-content/uploads/2025/07/1-2.jpg" alt="Imagem 3">
+  <img class="img" src="https://valeindependente.com.br/wp-content/uploads/2019/10/14-1.jpg" alt="Imagem 4">
+</div>
+
+<div class="content">
+  <div class="card">
+    <div class="topo">
+      <h2>Bem-vindo à Escola Estadual Sanico Teles</h2>
     </div>
+    <details>
+      <summary>Clique para ver a história da Escola Sanico Teles</summary>
+      <p style="line-height:1.6; margin-top:10px;">
+        A Escola Estadual Sanico Teles foi fundada em 15 de março de 1965, com o objetivo de proporcionar educação de qualidade para a comunidade local.
+        Ao longo dos anos, a escola tem se destacado por seu compromisso com o ensino e a formação integral dos alunos.
+        Com uma equipe dedicada de professores e funcionários, a escola oferece uma variedade de programas acadêmicos e extracurriculares,
+        promovendo um ambiente de aprendizado inclusivo e estimulante.
+        A Sanico Teles orgulha-se de sua história rica e contínua evolução, sempre buscando inovar e atender às necessidades educacionais da região.
+      </p>
+    </details>
   </div>
+</div>
+
+
+
 </body>
 </html>
