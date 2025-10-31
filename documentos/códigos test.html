@@ -10,7 +10,7 @@
     font-family: Arial, sans-serif;
   }
 
-   .header {
+  .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,7 +92,7 @@
 
   .card {
     text-align: center;
-    max-width: 700px;
+    max-width: 900px;
     border: 1px solid white;
     padding: 20px;
   }
@@ -102,24 +102,25 @@
     border: 1px solid white;
     padding: 8px;
   }
+
   .gallery {
     display: flex;
     justify-content: center;
     gap: 26px;
     margin-top: 60px;
   }
+
   .img {
     width: 250px;
-    height: 190Px;
+    height: 190px;
   }
-
 </style>
 </head>
 <body>
 
 <div class="header">
   <div class="left">
-    <img  src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
+    <img src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
     <div class="school-name">Escola Estadual Sanico Teles</div>
   </div>
 
@@ -147,6 +148,7 @@
   <a href="#">Administração</a>
   <a href="#">Laboratórios</a>
 </div>
+
 <div class="gallery">
   <img class="img" src="https://valeindependente.files.wordpress.com/2016/04/logo-oficial-sanico.jpg?w=148" alt="Imagem 1">
   <img class="img" src="https://valeindependente.com.br/wp-content/uploads/2025/07/3-2.jpg" alt="Imagem 2">
@@ -159,20 +161,33 @@
     <div class="topo">
       <h2>Bem-vindo à Escola Estadual Sanico Teles</h2>
     </div>
-    <details>
-      <summary>Clique para ver a história da Escola Sanico Teles</summary>
-      <p style="line-height:1.6; margin-top:10px;">
-        A Escola Estadual Sanico Teles foi fundada em 15 de março de 1965, com o objetivo de proporcionar educação de qualidade para a comunidade local.
-        Ao longo dos anos, a escola tem se destacado por seu compromisso com o ensino e a formação integral dos alunos.
-        Com uma equipe dedicada de professores e funcionários, a escola oferece uma variedade de programas acadêmicos e extracurriculares,
-        promovendo um ambiente de aprendizado inclusivo e estimulante.
-        A Sanico Teles orgulha-se de sua história rica e contínua evolução, sempre buscando inovar e atender às necessidades educacionais da região.
-      </p>
-    </details>
+
+    <div style="display:flex; align-items:flex-start; gap:25px; margin-top:25px; justify-content:center;">
+      <div style="background-color:#e0f0ff; border:2px solid #0074d9; border-radius:10px; padding:15px; width:180px; text-align:center; box-shadow:2px 2px 5px rgba(0,0,0,0.2);">
+        <h4 style="margin-top:0; color:#000000;">História do Sanico:</h4>
+        <img src="https://th.bing.com/th/id/OIP.IlzYe1pB3TwL3LtaXDj1VAHaEO?w=325&h=185&c=7&r=0&o=7&pid=1.7&rm=3" alt="Livro" style="width:50px; margin-top:8px;">
+      </div>
+
+      <div style="font-size:40px; color:#0074d9; margin-top:40px;">&#10140;</div>
+
+      <div style="flex:1; border:1px solid #ccc; border-radius:10px; padding:20px; background-color:#fafafa;">
+        <details open>
+          <summary style="font-weight:bold; font-size:16px; cursor:pointer; color:#003366;">
+            Clique para ver a história da Escola Sanico Teles
+          </summary>
+          <p style="line-height:1.6; margin-top:10px; text-align:justify;">
+            O grupo “Sinhá Moreira”, situado à Rua Olavo Marques nº 181 em Santa Rita do Sapucaí, foi instalado aos vinte dias do mês de fevereiro de 1964, criado pelo Decreto nº 6.889 de 21 de março de 1963.<br><br>
+            Mais tarde, pelo Decreto 7.734 de 24 de junho de 1964, o Grupo Escolar “Sinhá Moreira” passou a denominar-se “Grupo Escolar Sanico Teles”.<br><br>
+            Atualmente tem nome de <strong>Escola Estadual Sanico Teles</strong>.<br><br>
+            Em 1984 é autorizada a extensão de séries (5ª série), e em 1985 foi autorizado o funcionamento da 6ª, 7ª e 8ª série.<br><br>
+            Em 2006, foi aprovado o Ensino Fundamental e o médio da EJA com o objetivo de ampliar o atendimento educacional a jovens e adultos que não cursaram na idade própria.<br><br>
+            É uma das escolas integrantes do <strong>Projeto Incluir</strong>. Conta com sala de recursos para alunos com necessidades especiais e participa também do <strong>Projeto Tempo Integral</strong>.
+          </p>
+        </details>
+      </div>
+    </div>
   </div>
 </div>
-
-
 
 </body>
 </html>
