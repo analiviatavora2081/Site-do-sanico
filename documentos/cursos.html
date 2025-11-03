@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cursos - Escola Estadual Sanico Teles</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Times New Roman", serif;
+    background-color: #f8f8f8;
+  }
+
+  /* Cabeçalho */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+  }
+
+  header img {
+    width: 60px;
+    margin-right: 10px;
+  }
+
+  header h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  /* Menu */
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border: 1px solid #000;
+    border-bottom: none;
+    font-size: 14px;
+  }
+
+  nav a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Conteúdo principal */
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+  }
+
+  /* Caixa de cursos */
+  .cursos {
+    width: 55%;
+    background-color: #ffffff;
+    border: 1px solid #000;
+  }
+
+  .cursos h2 {
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #000;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 8px;
+  }
+
+  .cursos ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .cursos li {
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+
+  /* Coluna de imagens */
+  .imagens {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .imagens img {
+    width: 100%;
+    height: 120px;
+    background-color: #d9d9d9;
+    border: 1px solid #999;
+    object-fit: cover;
+  }
+
+  /* Título central “CURSOS” */
+  h2.titulo {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo da Escola">
+  <h1>Escola Estadual Sanico Teles</h1>
+</header>
+
+<h2 class="titulo">CURSOS</h2>
+
+<nav>
+  <a href="index.html">Casa</a>
+  <a href="academica.html">Área Acadêmica</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="#">Docentes</a>
+  <a href="#">Projetos</a>
+  <a href="#">Alunos e Pais</a>
+  <a href="#">Fotos e Vídeos</a>
+  <a href="#">Premiações</a>
+  <a href="#">Depoimentos</a>
+  <a href="#">Administração</a>
+  <a href="#">Laboratórios</a>
+</nav>
+
+<main>
+  <div class="cursos">
+    <h2>Cursos Oferecidos</h2>
+    <ul>
+      <li>Ensino Médio;</li>
+      <li>EJA;</li>
+      <li>Ensino Médio Noturno;</li>
+      <li>Ensino Médio Técnico em Informática;</li>
+      <li>Ensino Médio Técnico em Energias Renováveis;</li>
+      <li>Ensino Fundamental II;</li>
+    </ul>
+  </div>
+
+  <div class="imagens">
+    <img src="#" alt="Imagem 1">
+    <img src="#" alt="Imagem 2">
+    <img src="#" alt="Imagem 3">
+    <img src="#" alt="Imagem 4">
+  </div>
+</main>
+
+</body>
+</html>
