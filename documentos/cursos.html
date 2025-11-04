@@ -1,159 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cursos - Escola Estadual Sanico Teles</title>
+
 <style>
   body {
     margin: 0;
-    font-family: "Times New Roman", serif;
-    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
   }
 
-  /* Cabeçalho */
-  header {
+  .header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    border-bottom: 1px solid #000;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #000;
   }
 
-  header img {
-    width: 60px;
-    margin-right: 10px;
+  .left, .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
-  header h1 {
-    font-size: 28px;
-    margin: 0;
+  .left img {
+    width: 55px;
+    height: 55px;
+    border: 1px solid #000;
+    object-fit: cover;
   }
 
-  /* Menu */
-  nav {
+  .school-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .search {
+    flex: 1;
     display: flex;
     justify-content: center;
-    background-color: #fff;
-    border-bottom: 1px solid #000;
   }
 
-  nav a {
-    text-decoration: none;
-    color: black;
-    padding: 10px 15px;
-    border: 1px solid #000;
-    border-bottom: none;
+  .search input {
+    width: 40%;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+    text-align: center;
+  }
+
+  .right img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+
+  .enter {
+    font-weight: bold;
     font-size: 14px;
   }
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid #ffffff;
+    border-top: none;
+  }
 
-  nav a:hover {
+  .menu a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #000000;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .menu a:hover {
     background-color: #f0f0f0;
   }
 
-  /* Conteúdo principal */
-  main {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 60px;
-  }
 
-  /* Caixa de cursos */
-  .cursos {
-    width: 55%;
-    background-color: #ffffff;
-    border: 1px solid #000;
-  }
-
-  .cursos h2 {
+  
+  h1 {
     text-align: center;
-    font-size: 16px;
+    margin: 60px 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+  }
+
+  .box {
+    border: 1px solid #000;
+    width: 380px;
+  }
+
+  .box h3 {
+    text-align: center;
+    background-color: #e6e6e6;
     border-bottom: 1px solid #000;
-    background-color: #eaeaea;
+    padding: 5px;
     margin: 0;
-    padding: 8px;
   }
 
-  .cursos ul {
-    list-style: none;
-    margin: 0;
-    padding: 15px;
+  .box p {
+    padding: 10px;
+    line-height: 1.6;
   }
 
-  .cursos li {
-    margin-bottom: 6px;
-    font-size: 15px;
-  }
-
-  /* Coluna de imagens */
-  .imagens {
-    width: 25%;
+ 
+  .images {
     display: flex;
     flex-direction: column;
     gap: 25px;
   }
 
-  .imagens img {
-    width: 100%;
-    height: 120px;
-    background-color: #d9d9d9;
-    border: 1px solid #999;
+  .images img {
+    width: 250px; 
+    height: 140px;
+    border: 1px solid #000;
     object-fit: cover;
   }
-
-  /* Título central “CURSOS” */
-  h2.titulo {
-    text-align: center;
-    font-size: 26px;
-    margin-top: 20px;
-  }
-
 </style>
 </head>
+
 <body>
 
-<header>
-  <img src="logo.png" alt="Logo da Escola">
-  <h1>Escola Estadual Sanico Teles</h1>
-</header>
+  
+  <div class="header">
+    <div class="left">
+      <img src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
+      <div class="school-name">Escola Estadual Sanico Teles</div>
+    </div>
 
-<h2 class="titulo">CURSOS</h2>
+    <div class="search">
+      <input type="text" placeholder="🔍 Procurar">
+    </div>
 
-<nav>
-  <a href="index.html">Casa</a>
-  <a href="academica.html">Área Acadêmica</a>
+    <div class="right">
+      <img src="https://bantleon.de/assets/img/home/Content/Piktogramme/Ikon_6.png?m=1706695927&" alt="Localização">
+      <img src="https://ohioline.osu.edu/sites/ohioline/files/imce/Agriculture_and_Natural_Resources/HYG-5815-Figure2_2.jpg" alt="Home">
+      <div class="enter">Entrar</div>
+    </div>
+  </div>
+
+<div class="menu">
+   <a href="paginainicial.html">Home</a>
+  <a href="parte academica.html">Área Acadêmica</a>
   <a href="cursos.html">Cursos</a>
-  <a href="#">Docentes</a>
-  <a href="#">Projetos</a>
-  <a href="#">Alunos e Pais</a>
-  <a href="#">Fotos e Vídeos</a>
-  <a href="#">Premiações</a>
-  <a href="#">Depoimentos</a>
-  <a href="#">Administração</a>
-  <a href="#">Laboratórios</a>
-</nav>
+  <a href="docentes.html">Docentes</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="alunos e pais.html">Alunos e Pais</a>
+  <a href="Fotos e Vídeos.html">Fotos e Vídeos</a>
+  <a href="Premiações.html">Premiações</a>
+  <a href="Depoimentos.html">Depoimentos</a>
+  <a href="Administração.html">Administração</a>
+  <a href="Laboratórios.html">Laboratórios</a>
+</div>
 
-<main>
-  <div class="cursos">
-    <h2>Cursos Oferecidos</h2>
-    <ul>
-      <li>Ensino Médio;</li>
-      <li>EJA;</li>
-      <li>Ensino Médio Noturno;</li>
-      <li>Ensino Médio Técnico em Informática;</li>
-      <li>Ensino Médio Técnico em Energias Renováveis;</li>
-      <li>Ensino Fundamental II;</li>
-    </ul>
-  </div>
 
-  <div class="imagens">
-    <img src="#" alt="Imagem 1">
-    <img src="#" alt="Imagem 2">
-    <img src="#" alt="Imagem 3">
-    <img src="#" alt="Imagem 4">
+  <h1>Cursos Oferecidos Pela Escola Sanico Teles</h1>
+
+
+  <div class="content">
+    <div class="box">
+      <h3>Cursos Oferecidos</h3>
+      <p>
+        Ensino Médio;<br>
+        EJA;<br>
+        Ensino Médio Noturno;<br>
+        Ensino Médio Técnico em Informática;<br>
+        Ensino Médio Técnico em Energias Renováveis;<br>
+        Ensino Fundamental II;
+      </p>
+    </div>
+
+    <div class="images">
+    
+      <img src="https://tse2.mm.bing.net/th/id/OIP.oXMCUL9D8qT9GuwnPDtrRwHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagem 1">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.V2KW54BS3XIbwh8Gj6owPgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagem 2">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.TsNfyCAHPYMKURqCn9sbVgHaEy?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagem 3">
+      <img src="https://www.agenciaminas.mg.gov.br/ckeditor_assets/pictures/21531/content_intercambio_emti_-_sre_pouso_alegre_1.jpeg" alt="Imagem 4">
+    </div>
   </div>
-</main>
 
 </body>
 </html>
