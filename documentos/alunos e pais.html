@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alunos e Pais - Escola Estadual Sanico Teles</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Cabeçalho */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #000;
+  }
+
+  .left, .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border: 1px solid #000;
+  }
+
+  .school-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search input {
+    width: 40%;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  .right img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Menu */
+  .menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    border-top: none;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .menu a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Conteúdo principal */
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .main-box {
+    border: 1px solid #000;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 10px;
+  }
+
+  .main-box h2 {
+    background-color: #a2e4ff;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+  }
+
+  .info-box {
+    background-color: #00c8ff;
+    color: black;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  .info-box strong {
+    display: block;
+    font-size: 18px;
+  }
+
+  /* Calendário */
+  .calendar-section {
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+  }
+
+  .calendar-title {
+    display: inline-block;
+    background-color: #00c8ff;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 4px;
+    position: relative;
+    font-weight: bold;
+  }
+
+  .calendar-title::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 25px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #00c8ff transparent transparent transparent;
+  }
+
+  .calendar-section input[type="month"] {
+    display: block;
+    margin: 30px auto 10px;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .calendar {
+    margin: 20px auto;
+    width: 280px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Cabeçalho -->
+<div class="header">
+  <div class="left">
+    <img src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
+    <div class="school-name">Escola Estadual Sanico Teles</div>
+  </div>
+
+  <div class="search">
+    <input type="text" placeholder="🔍 Procurar">
+  </div>
+
+  <div class="right">
+    <img src="https://bantleon.de/assets/img/home/Content/Piktogramme/Ikon_6.png?m=1706695927&" alt="Localização">
+    <img src="https://ohioline.osu.edu/sites/ohioline/files/imce/Agriculture_and_Natural_Resources/HYG-5815-Figure2_2.jpg" alt="Home">
+    <div><strong>Entrar</strong></div>
+  </div>
+</div>
+
+<!-- Menu -->
+<div class="menu">
+  <a href="paginainicial.html">Casa</a>
+  <a href="parte academica.html">Área Acadêmica</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="docentes.html">Docentes</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="alunos e pais.html">Alunos e Pais</a>
+  <a href="Fotos e Vídeos.html">Fotos e Vídeos</a>
+  <a href="Premiações.html">Premiações</a>
+  <a href="Depoimentos.html">Depoimentos</a>
+  <a href="Administração.html">Administração</a>
+  <a href="Laboratórios.html">Laboratórios</a>
+</div>
+
+<!-- Conteúdo -->
+<h1>Alunos e Pais</h1>
+
+<div class="main-box">
+  <h2>Área dos pais e alunos</h2>
+
+  <div class="info-box">
+    <strong>Boletim dos alunos</strong>
+    Acesso a Boletim, Notas, Frequência dos Alunos
+  </div>
+
+  <div class="info-box">
+    <strong>Comunicados Individuais</strong>
+    Confira Comunicados, avisos específicos para você
+  </div>
+
+  <div class="info-box">
+    <strong>Downloads</strong>
+    Baixe autorizações, Listas, Formulários e outros Documentos
+  </div>
+</div>
+
+<!-- Calendário -->
+<div class="calendar-section">
+  <div class="calendar-title">Calendário Escolar</div>
+  <input type="month" value="2025-11">
+  <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo" 
+          style="border:solid 1px #777" width="300" height="300"></iframe>
+</div>
+
+</body>
+</html>

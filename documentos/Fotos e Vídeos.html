@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fotos e Vídeos - Escola Estadual Sanico Teles</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Cabeçalho */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #000;
+  }
+
+  .left, .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border: 1px solid #000;
+  }
+
+  .school-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search input {
+    width: 40%;
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  .right img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Menu */
+  .menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .menu a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Conteúdo principal */
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+<!-- Cabeçalho -->
+<div class="header">
+  <div class="left">
+    <img src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
+    <div class="school-name">Escola Estadual Sanico Teles</div>
+  </div>
+
+  <div class="search">
+    <input type="text" placeholder="🔍 Procurar">
+  </div>
+
+  <div class="right">
+    <img src="https://bantleon.de/assets/img/home/Content/Piktogramme/Ikon_6.png?m=1706695927&" alt="Localização">
+    <img src="https://ohioline.osu.edu/sites/ohioline/files/imce/Agriculture_and_Natural_Resources/HYG-5815-Figure2_2.jpg" alt="Home">
+    <div><strong>Entrar</strong></div>
+  </div>
+</div>
+
+<!-- Menu -->
+<div class="menu">
+  <a href="paginainicial.html">Casa</a>
+  <a href="parte academica.html">Área Acadêmica</a>
+  <a href="cursos.html">Cursos</a>
+  <a href="docentes.html">Docentes</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="alunos e pais.html">Alunos e Pais</a>
+  <a href="fotos e vídeos.html">Fotos e Vídeos</a>
+  <a href="premiações.html">Premiações</a>
+  <a href="depoimentos.html">Depoimentos</a>
+  <a href="administração.html">Administração</a>
+  <a href="laboratórios.html">Laboratórios</a>
+</div>
+
+
+<h1>Fotos e Vídeos</h1>
+
+<div class="gallery">
+  <div class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrs-Igfd-QRmlV6HnR95sHnXFRXtZzCdmYhA&s" alt="Evento Escolar"></div>
+  <div class="photo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLprF3irs8ZZEXkdZW8h9Wjcl_4x4UEXfm_w&s" alt="Alunos na Escola"></div>
+  <div class="photo"><img src="" alt="Vídeo Aula"></div>
+
+  <div class="photo"><img src="https://www.emporiodenoticias.com/wp-content/uploads/2024/08/SanicoNovo8.jpeg" alt="Atividade Escolar"></div>
+  <div class="photo"><img src="https://valeindependente.com.br/wp-content/uploads/2025/09/d6763bdf-0078-49ee-9b6c-ab119b36d13e.jpg" alt="Professores e Alunos"></div>
+  <div class="photo"><img src="https://cdn.pixabay.com/photo/2015/09/09/18/53/classroom-932083_960_720.jpg" alt="Sala de Aula"></div>
+
+  <div class="photo"><img src="https://cdn.pixabay.com/photo/2016/03/23/09/57/education-1273119_960_720.jpg" alt="Biblioteca"></div>
+  <div class="photo"><img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/school-2179312_960_720.jpg" alt="Pátio Escolar"></div>
+  <div class="photo"><img src="https://cdn.pixabay.com/photo/2017/02/20/15/19/students-2082648_960_720.jpg" alt="Estudantes"></div>
+</div>
+
+</body>
+</html>
