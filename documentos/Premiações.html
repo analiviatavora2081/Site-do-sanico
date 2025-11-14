@@ -10,7 +10,6 @@
     font-family: Arial, sans-serif;
   }
 
-
   .header {
     display: flex;
     align-items: center;
@@ -62,7 +61,6 @@
     font-size: 14px;
   }
 
-
   .menu {
     display: flex;
     justify-content: center;
@@ -84,7 +82,6 @@
     background-color: #f0f0f0;
   }
 
-  
   .content {
     text-align: center;
     padding: 20px;
@@ -132,7 +129,6 @@
 </head>
 <body>
 
-
 <div class="header">
   <div class="left">
     <img src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
@@ -140,7 +136,7 @@
   </div>
 
   <div class="search">
-    <input type="text" placeholder="🔍 Search">
+    <input id="searchInput" type="text" placeholder="🔍 Search">
   </div>
 
   <div class="right">
@@ -150,46 +146,67 @@
   </div>
 </div>
 
-
 <div class="menu">
-  <a href="index.html">Casa</a>
+  <a href="paginainicial.html">Home</a>
   <a href="parte academica.html">Área Acadêmica</a>
   <a href="cursos.html">Cursos</a>
   <a href="docentes.html">Docentes</a>
   <a href="projetos.html">Projetos</a>
   <a href="alunos e pais.html">Alunos e Pais</a>
-  <a href="fotos e vídeos.html">Fotos e Vídeos</a>
-  <a href="premiações.html">Premiações</a>
-  <a href="depoimentos.html">Depoimentos</a>
-  <a href="administração.html">Administração</a>
-  <a href="laboratórios.html">Laboratórios</a>
+  <a href="Fotos e Vídeos.html">Fotos e Vídeos</a>
+  <a href="Premiações.html">Premiações</a>
+  <a href="Depoimentos.html">Depoimentos</a>
+  <a href="Administração.html">Administração</a>
 </div>
-
 
 <div class="content">
-  <h1>Premiações</h1>
 
-  <h2>Projete 2024</h2>
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300x160" alt="">
-    <img src="https://via.placeholder.com/300x160" alt="">
-    <img src="https://via.placeholder.com/300x160" alt="">
+  <div class="section">
+    <h2>Projete 2024</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x160" alt="">
+      <img src="https://via.placeholder.com/300x160" alt="">
+      <img src="https://via.placeholder.com/300x160" alt="">
+    </div>
   </div>
 
-  <h2>Fetin 2024</h2>
-  <div class="gallery">
-    <img src="https://mail.google.com/mail/u/1?ui=2&ik=d66e7f64d7&attid=0.1&permmsgid=msg-f:1848583693392297103&th=19a77d132e3a3c8f&view=att&disp=inline&realattid=f_mhvwz6vc0&zw" alt="">
-    <img src="https://www.instagram.com/reel/DKzm_K5Md7x/?igsh=bTc1cnUzZWUydWVq" alt="">
-    <img src="https://via.placeholder.com/300x160" alt="">
+  <div class="section">
+    <h2>Fetin 2024</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x160" alt="">
+      <img src="https://via.placeholder.com/300x160" alt="">
+      <img src="https://via.placeholder.com/300x160" alt="">
+    </div>
   </div>
 
-  <h2>RoboCore Experience 2025</h2>
-  <div class="gallery">
-    <img src="https://tse4.mm.bing.net/th/id/OIP.YegAkHnlLd84GccMv3BRdwHaDU?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
-    <img src="https://www.agenciaminas.mg.gov.br/ckeditor_assets/pictures/21531/content_intercambio_emti_-_sre_pouso_alegre_1.jpeg" alt="">
-    <img src="https://via.placeholder.com/300x160" alt="">
+  <div class="section">
+    <h2>RoboCore Experience 2025</h2>
+    <div class="gallery">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.YegAkHnlLd84GccMv3BRdwHaDU" alt="">
+      <img src="https://www.agenciaminas.mg.gov.br/ckeditor_assets/pictures/21531/content_intercambio_emti_-_sre_pouso_alegre_1.jpeg" alt="">
+      <img src="https://via.placeholder.com/300x160" alt="">
+    </div>
   </div>
+
 </div>
+
+<!-- 🔍 SCRIPT DA BUSCA -->
+<script>
+document.getElementById("searchInput").addEventListener("input", function () {
+    let texto = this.value.toLowerCase();
+    let secoes = document.querySelectorAll(".section");
+
+    secoes.forEach(secao => {
+        let titulo = secao.querySelector("h2").innerText.toLowerCase();
+
+        if (titulo.includes(texto)) {
+            secao.style.display = "";
+        } else {
+            secao.style.display = "none";
+        }
+    });
+});
+</script>
 
 </body>
 </html>

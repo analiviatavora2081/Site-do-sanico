@@ -10,7 +10,6 @@
     font-family: Arial, sans-serif;
   }
 
-
   .header {
     display: flex;
     align-items: center;
@@ -62,7 +61,6 @@
     font-size: 14px;
   }
 
-
   .menu {
     display: flex;
     justify-content: center;
@@ -83,7 +81,6 @@
   .menu a:hover {
     background-color: #f0f0f0;
   }
-
 
   .content {
     padding: 20px;
@@ -107,7 +104,6 @@
     margin-bottom: 10px;
   }
 
-
   table {
     margin: 0 auto;
     border-collapse: collapse;
@@ -123,7 +119,6 @@
   th {
     background-color: white;
   }
-
 
   .subjects {
     display: flex;
@@ -151,7 +146,6 @@
 </head>
 <body>
 
-
 <div class="header">
   <div class="left">
     <img src="https://th.bing.com/th/id/OIP.WAl1L8i5dzOiEHr8cDqJ3gAAAA?w=133&h=149&c=7&r=0&o=7&pid=1.7&rm=3" alt="Logo">
@@ -159,7 +153,11 @@
   </div>
 
   <div class="search">
-    <input type="text" placeholder="🔍 Procurar">
+    <input 
+      id="barraPesquisa"
+      type="text" 
+      placeholder="🔍 Procurar"
+      onkeyup="pesquisarNoSite()">
   </div>
 
   <div class="right">
@@ -169,9 +167,8 @@
   </div>
 </div>
 
-
 <div class="menu">
-   <a href="paginainicial.html">Home</a>
+  <a href="paginainicial.html">Home</a>
   <a href="parte academica.html">Área Acadêmica</a>
   <a href="cursos.html">Cursos</a>
   <a href="docentes.html">Docentes</a>
@@ -181,12 +178,10 @@
   <a href="Premiações.html">Premiações</a>
   <a href="Depoimentos.html">Depoimentos</a>
   <a href="Administração.html">Administração</a>
-  <a href="Laboratórios.html">Laboratórios</a>
 </div>
 
 <div class="content">
   <h1>Área acadêmica</h1>
-
 
   <div class="section-title">Carga Horária</div>
 
@@ -261,12 +256,12 @@
         Matemática<br>
         Física<br>
         Química<br>
-        Biologia
-        fiosofia<br>
+        Biologia<br>
+        Filosofia<br>
         Sociologia<br>
         História<br>
         Geografia<br>
-        E outras materias complementares<br>
+        E outras matérias complementares<br>
       </p>
     </div>
 
@@ -282,11 +277,36 @@
         História<br>
         Geografia<br>
         Ensino Religioso<br>
-        E outras materias complementares<br>
+        E outras matérias complementares<br>
       </p>
     </div>
   </div>
 </div>
+
+<!-- 🔍 SCRIPT DA PESQUISA -->
+<script>
+function pesquisarNoSite() {
+  let termo = document.getElementById("barraPesquisa").value.toLowerCase().trim();
+  if (termo === "") return;
+
+  let elementos = document.querySelectorAll("body *:not(script):not(style)");
+
+  let achou = false;
+
+  elementos.forEach(el => {
+    if (el.innerText && el.innerText.toLowerCase().includes(termo)) {
+
+      if (!achou) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        achou = true;
+      }
+
+      el.style.backgroundColor = "yellow";
+      setTimeout(() => el.style.backgroundColor = "", 2000);
+    }
+  });
+}
+</script>
 
 </body>
 </html>

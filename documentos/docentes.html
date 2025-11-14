@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -11,7 +10,6 @@
     font-family: Arial, sans-serif;
   }
 
- 
   .header {
     display: flex;
     align-items: center;
@@ -76,7 +74,6 @@
     background-color: #f0f0f0;
   }
 
-
   h1 {
     text-align: center;
     margin-top: 20px;
@@ -133,7 +130,7 @@
 </div>
 
 <div class="menu">
-  <a href="paginainicial.html">Home</a>
+   <a href="paginainicial.html">Home</a>
   <a href="parte academica.html">Área Acadêmica</a>
   <a href="cursos.html">Cursos</a>
   <a href="docentes.html">Docentes</a>
@@ -143,18 +140,15 @@
   <a href="Premiações.html">Premiações</a>
   <a href="Depoimentos.html">Depoimentos</a>
   <a href="Administração.html">Administração</a>
-  <a href="Laboratórios.html">Laboratórios</a>
 </div>
 
-
 <h1>Docentes</h1>
-
 
 <div class="docentes-container">
   <div class="prof-card">
     <img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzyhSp1EOyFui4M4bKxf1jF_czTtf1ca_Jx2fUeC8FWzaWWYuNdqD6qokzicDMbd10l-h5xLYtt0SBWoH2i4HBJ3ZaIuzS4YuAgZeyjK7p2SGAR_9B57y6cqSUx7IAs-MbVnRqTHw=s680-w680-h510-rw" alt="Professor 1">
     <div class="prof-info">
-      <strong>Nome:</strong> <br>
+      <strong>Nome:</strong>
       <strong>Matéria:</strong>
     </div>
   </div>
@@ -162,7 +156,7 @@
   <div class="prof-card">
     <img src="https://via.placeholder.com/250x150" alt="Professor 2">
     <div class="prof-info">
-      <strong>Nome:</strong> <br>
+      <strong>Nome:</strong>
       <strong>Matéria:</strong>
     </div>
   </div>
@@ -170,7 +164,7 @@
   <div class="prof-card">
     <img src="https://via.placeholder.com/250x150" alt="Professor 3">
     <div class="prof-info">
-      <strong>Nome:</strong> <br>
+      <strong>Nome:</strong>
       <strong>Matéria:</strong>
     </div>
   </div>
@@ -178,7 +172,7 @@
   <div class="prof-card">
     <img src="https://via.placeholder.com/250x150" alt="Professor 4">
     <div class="prof-info">
-      <strong>Nome:</strong> <br>
+      <strong>Nome:</strong>
       <strong>Matéria:</strong>
     </div>
   </div>
@@ -186,7 +180,7 @@
   <div class="prof-card">
     <img src="https://via.placeholder.com/250x150" alt="Professor 5">
     <div class="prof-info">
-      <strong>Nome:</strong> <br>
+      <strong>Nome:</strong>
       <strong>Matéria:</strong>
     </div>
   </div>
@@ -194,11 +188,34 @@
   <div class="prof-card">
     <img src="https://via.placeholder.com/250x150" alt="Professor 6">
     <div class="prof-info">
-      <strong>Nome:</strong> <br>
+      <strong>Nome:</strong>
       <strong>Matéria:</strong>
     </div>
   </div>
 </div>
+
+<!-- 🔍 SISTEMA DE BUSCA SIMPLES -->
+<script>
+  const searchInput = document.querySelector(".search input");
+
+  searchInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      const texto = searchInput.value.toLowerCase();
+
+      if (texto.includes("home")) window.location.href = "paginainicial.html";
+      else if (texto.includes("acad")) window.location.href = "parte academica.html";
+      else if (texto.includes("curso")) window.location.href = "cursos.html";
+      else if (texto.includes("docen")) window.location.href = "docentes.html";
+      else if (texto.includes("projet")) window.location.href = "projetos.html";
+      else if (texto.includes("aluno")) window.location.href = "alunos e pais.html";
+      else if (texto.includes("foto") || texto.includes("vídeo")) window.location.href = "Fotos e Vídeos.html";
+      else if (texto.includes("prem")) window.location.href = "Premiações.html";
+      else if (texto.includes("depo")) window.location.href = "Depoimentos.html";
+      else if (texto.includes("adm")) window.location.href = "Administração.html";
+      else alert("Página não encontrada!");
+    }
+  });
+</script>
 
 </body>
 </html>

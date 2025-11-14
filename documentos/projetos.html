@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projetos - Escola Estadual Sanico Teles</title>
+
 <style>
   body {
     margin: 0;
@@ -116,10 +117,9 @@
     margin-top: 20px;
   }
 
-  /* ---- FOTOS MAIORES ---- */
   .project-gallery img {
-    width: 320px;  /* aumentada */
-    height: 220px; /* aumentada */
+    width: 320px;
+    height: 220px;
     object-fit: cover;
     border-radius: 12px;
     background-color: #e6e6e6;
@@ -132,7 +132,9 @@
   }
 </style>
 </head>
+
 <body>
+
 
 <div class="header">
   <div class="left">
@@ -141,15 +143,22 @@
   </div>
 
   <div class="search">
-    <input type="text" placeholder="🔍 Search">
+    <input 
+      id="barraPesquisa"
+      type="text" 
+      placeholder="🔍 Procurar"
+      onkeyup="pesquisarNoSite()">
   </div>
 
   <div class="right">
     <img src="https://bantleon.de/assets/img/home/Content/Piktogramme/Ikon_6.png?m=1706695927&" alt="Localização">
-    <img src="https://ohioline.osu.edu/sites/ohioline/files/imce/Agriculture_and_Natural_Resources/HYG-5815-Figure2_2.jpg" alt="Home">
+    <a href="paginainicial.html">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home">
+    </a>
     <div><strong>Entrar</strong></div>
   </div>
 </div>
+
 
 <div class="menu">
   <a href="paginainicial.html">Home</a>
@@ -162,19 +171,20 @@
   <a href="Premiações.html">Premiações</a>
   <a href="Depoimentos.html">Depoimentos</a>
   <a href="Administração.html">Administração</a>
-  <a href="Laboratórios.html">Laboratórios</a>
 </div>
 
 <h1>Projetos</h1>
 
+>
 <div class="section">
   <div class="section-title">Robótica</div>
   <div class="project-gallery">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh67NoOtv9FGDMIhGafifohe3aN_lKy0uzlQ&s" alt="Projeto Robótica 1">
-    <img src="https://mail.google.com/mail/u/1?ui=2&ik=d66e7f64d7&attid=0.1&permmsgid=msg-f:1848507493888474335&th=19a737c599debcdf&view=att&disp=safe&realattid=f_mhupq0fs0&zw" alt="Projeto Robótica 2">
+    <img src="https://valeindependente.files.wordpress.com/2019/10/11-1.jpg" alt="Projeto Robótica 1">
+    <img src="https://mail.google.com/mail/u/0?ui=2&ik=aa0a678c0b&attid=0.2&permmsgid=msg-f:1848775340678295720&th=19a82b608aa1b0a8&view=att&disp=safe&realattid=19a82b561a3fb51fcc54&zw" alt="Projeto Robótica 2">
     <img src="https://mail.google.com/mail/u/0?ui=2&ik=aa0a678c0b&attid=0.1&permmsgid=msg-a:r-119862606846025842&th=19a737f0e71319e6&view=att&disp=safe&realattid=f_mhupu5jp0&zw" alt="Projeto Robótica 3">
   </div>
 </div>
+
 
 <div class="section">
   <div class="section-title">Leitura</div>
@@ -184,6 +194,31 @@
     <img src="https://mail.google.com/mail/u/0?ui=2&ik=aa0a678c0b&attid=0.1&permmsgid=msg-a:r-3780865972240814418&th=19a73839212f62b6&view=att&disp=safe&realattid=f_mhuq036r0&zw" alt="Projeto Leitura 3">
   </div>
 </div>
+
+
+<script>
+function pesquisarNoSite() {
+  let termo = document.getElementById("barraPesquisa").value.toLowerCase().trim();
+  if (termo === "") return;
+
+  let elementos = document.querySelectorAll("body *:not(script):not(style)");
+
+  let achou = false;
+
+  elementos.forEach(el => {
+    if (el.innerText && el.innerText.toLowerCase().includes(termo)) {
+
+      if (!achou) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        achou = true;
+      }
+
+      el.style.backgroundColor = "yellow";
+      setTimeout(() => el.style.backgroundColor = "", 2000);
+    }
+  });
+}
+</script>
 
 </body>
 </html>

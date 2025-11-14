@@ -62,6 +62,7 @@
     font-weight: bold;
     font-size: 14px;
   }
+
 .menu {
     display: flex;
     justify-content: center;
@@ -83,8 +84,6 @@
     background-color: #c7a9a9;
   }
 
-
-  
   h1 {
     text-align: center;
     margin: 60px 0;
@@ -116,7 +115,6 @@
     line-height: 1.6;
   }
 
- 
   .images {
     display: flex;
     flex-direction: column;
@@ -163,12 +161,10 @@
   <a href="Premiações.html">Premiações</a>
   <a href="Depoimentos.html">Depoimentos</a>
   <a href="Administração.html">Administração</a>
-  <a href="Laboratórios.html">Laboratórios</a>
 </div>
 
 
   <h1>Cursos Oferecidos Pela Escola Sanico Teles</h1>
-
 
   <div class="content">
     <div class="box">
@@ -182,6 +178,30 @@
         Ensino Fundamental II;
       </p>
     </div>
+  </div>
+
+<!-- 🔍 SCRIPT DA BARRA DE PESQUISA -->
+<script>
+  const searchInput = document.querySelector(".search input");
+
+  searchInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      const texto = searchInput.value.toLowerCase();
+
+      if (texto.includes("home")) window.location.href = "paginainicial.html";
+      else if (texto.includes("acad")) window.location.href = "parte academica.html";
+      else if (texto.includes("curso")) window.location.href = "cursos.html";
+      else if (texto.includes("docen")) window.location.href = "docentes.html";
+      else if (texto.includes("projet")) window.location.href = "projetos.html";
+      else if (texto.includes("aluno")) window.location.href = "alunos e pais.html";
+      else if (texto.includes("foto") || texto.includes("vídeo")) window.location.href = "Fotos e Vídeos.html";
+      else if (texto.includes("prem")) window.location.href = "Premiações.html";
+      else if (texto.includes("depo")) window.location.href = "Depoimentos.html";
+      else if (texto.includes("adm")) window.location.href = "Administração.html";
+      else alert("Página não encontrada!");
+    }
+  });
+</script>
 
 </body>
 </html>
