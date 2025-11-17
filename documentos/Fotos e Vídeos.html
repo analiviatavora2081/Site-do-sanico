@@ -10,7 +10,6 @@
     font-family: Arial, sans-serif;
   }
 
-  
   .header {
     display: flex;
     align-items: center;
@@ -47,7 +46,8 @@
     width: 40%;
     padding: 6px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
+    background-color: #ccc;
     text-align: center;
   }
 
@@ -56,7 +56,6 @@
     height: 30px;
   }
 
-  
   .menu {
     display: flex;
     justify-content: center;
@@ -76,7 +75,6 @@
     background: #f0f0f0;
   }
 
- 
   h1 {
     text-align: center;
     margin-top: 20px;
@@ -84,7 +82,7 @@
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 40px;
     justify-items: center;
@@ -100,7 +98,6 @@
 </style>
 </head>
 <body>
-
 
 <div class="header">
   <div class="left">
@@ -119,21 +116,18 @@
   </div>
 </div>
 
-
 <div class="menu">
-  <a href="paginainicial.html">Casa</a>
+  <a href="paginainicial.html">Home</a>
   <a href="parte academica.html">Área Acadêmica</a>
   <a href="cursos.html">Cursos</a>
   <a href="docentes.html">Docentes</a>
   <a href="projetos.html">Projetos</a>
   <a href="alunos e pais.html">Alunos e Pais</a>
-  <a href="fotos e vídeos.html">Fotos e Vídeos</a>
-  <a href="premiações.html">Premiações</a>
-  <a href="depoimentos.html">Depoimentos</a>
-  <a href="administração.html">Administração</a>
-  <a href="laboratórios.html">Laboratórios</a>
+  <a href="Fotos e Vídeos.html">Fotos e Vídeos</a>
+  <a href="Premiações.html">Premiações</a>
+  <a href="Depoimentos.html">Depoimentos</a>
+  <a href="Administração.html">Administração</a>
 </div>
-
 
 <h1>Fotos e Vídeos</h1>
 
@@ -150,6 +144,29 @@
   <div class="photo"><img src="https://tse4.mm.bing.net/th/id/OIP.YegAkHnlLd84GccMv3BRdwHaDU?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pátio Escolar"></div>
   <div class="photo"><img src="https://tse2.mm.bing.net/th/id/OIP.GnAzGZKG2WtYaeAOYBYoDAHaJQ?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Estudantes"></div>
 </div>
+
+
+<script>
+  const searchInput = document.querySelector(".search input");
+
+  searchInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      const texto = searchInput.value.toLowerCase();
+
+      if (texto.includes("home")) window.location.href = "paginainicial.html";
+      else if (texto.includes("acad")) window.location.href = "parte academica.html";
+      else if (texto.includes("curso")) window.location.href = "cursos.html";
+      else if (texto.includes("docen")) window.location.href = "docentes.html";
+      else if (texto.includes("projet")) window.location.href = "projetos.html";
+      else if (texto.includes("aluno")) window.location.href = "alunos e pais.html";
+      else if (texto.includes("foto") || texto.includes("vídeo")) window.location.href = "Fotos e Vídeos.html";
+      else if (texto.includes("prem")) window.location.href = "Premiações.html";
+      else if (texto.includes("depo")) window.location.href = "Depoimentos.html";
+      else if (texto.includes("adm")) window.location.href = "Administração.html";
+      else alert("Página não encontrada!");
+    }
+  });
+</script>
 
 </body>
 </html>

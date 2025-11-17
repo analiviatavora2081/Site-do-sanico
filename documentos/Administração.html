@@ -106,7 +106,6 @@
     text-align: justify;
   }
 
- 
   h2 {
     text-align: center;
     font-size: 28px;
@@ -144,7 +143,7 @@
   </div>
 
   <div class="search">
-    <input type="text" placeholder="🔍 Procurar">
+    <input type="text" id="searchInput" placeholder="🔍 Procurar">
   </div>
 
   <div class="right">
@@ -154,7 +153,7 @@
   </div>
 </div>
 
-<div class="menu">
+<div class="menu" id="menuLinks">
    <a href="paginainicial.html">Home</a>
   <a href="parte academica.html">Área Acadêmica</a>
   <a href="cursos.html">Cursos</a>
@@ -165,14 +164,13 @@
   <a href="Premiações.html">Premiações</a>
   <a href="Depoimentos.html">Depoimentos</a>
   <a href="Administração.html">Administração</a>
- 
 </div>
 
 <div class="content">
   <h1>Administração</h1>
 
   <div class="intro-box">
-    A administração da Escola Estadual Sanico Teles é formada por profissionais comprometidos com a qualidade de ensino, o bem-estar dos alunos e o bom funcionamento da instituição. Com responsabilidade e dedicação, a equipe trabalha diariamente para garantir um ambiente organizado, acolhedor e propício para o aprendizado.
+    A administração da Escola Estadual Sanico Teles é formada por profissionais comprometidos com a qualidade de ensino, o bem-estar dos alunos e o bom funcionamento da instituição.
   </div>
 
   <h2>Equipe Diretiva</h2>
@@ -194,6 +192,25 @@
     <img src="https://via.placeholder.com/200x130" alt="">
   </div>
 </div>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const menuLinks = document.getElementById("menuLinks").getElementsByTagName("a");
+
+  searchInput.addEventListener("keyup", function () {
+    let filter = searchInput.value.toLowerCase();
+
+    for (let link of menuLinks) {
+      let text = link.textContent.toLowerCase();
+
+      if (text.includes(filter)) {
+        link.style.display = "inline-block";
+      } else {
+        link.style.display = "none";
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
