@@ -47,7 +47,7 @@
     width: 40%;
     padding: 6px;
     border-radius: 10px;
-    border: 1px ;
+    border: 1px;
     background-color: #ccc;
     text-align: center;
   }
@@ -88,26 +88,31 @@
     max-width: 1000px;
   }
 
+  /* --- NOVA VERSÃO DO TÍTULO CENTRALIZADO E AZUL, SEM ABSOLUTE --- */
   .section-title {
-    display: inline-block;
-    background-color: #222;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 4px;
-    position: relative;
-    font-weight: bold;
-    margin-bottom: 20px;
+      display: block;
+      width: fit-content;
+      margin: 0 auto 20px auto;
+      background-color: #001b52;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
   }
 
   .section-title::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 25px;
-    border-width: 8px;
-    border-style: solid;
-    border-color: #222 transparent transparent transparent;
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 12px solid #0055ff;
+      margin-top: 5px;
   }
+  /* ----------------------------------------------------------- */
 
   .project-gallery {
     display: flex;
@@ -173,11 +178,9 @@
   <a href="Administração.html">Administração</a>
 </div>
 
-<h1>Projetos</h1>
 
->
 <div class="section">
-  <div class="section-title">Robótica</div>
+  <div class="section-title">Projeto de Robótica</div>
   <div class="project-gallery">
     <img src="https://valeindependente.files.wordpress.com/2019/10/11-1.jpg" alt="Projeto Robótica 1">
     <img src="https://mail.google.com/mail/u/0?ui=2&ik=aa0a678c0b&attid=0.2&permmsgid=msg-f:1848775340678295720&th=19a82b608aa1b0a8&view=att&disp=safe&realattid=19a82b561a3fb51fcc54&zw" alt="Projeto Robótica 2">
@@ -185,9 +188,8 @@
   </div>
 </div>
 
-
 <div class="section">
-  <div class="section-title">Leitura</div>
+  <div class="section-title">Projeto de Leitura</div>
   <div class="project-gallery">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9zhgTfkHeE6Q9l0NEwU2XVayxm_-QwdTAOA&s" alt="Projeto Leitura 1">
     <img src="https://mail.google.com/mail/u/0?ui=2&ik=aa0a678c0b&attid=0.1&permmsgid=msg-a:r438590260820941597&th=19a7384fda7882c4&view=att&disp=safe&realattid=f_mhuq1nrz0&zw" alt="Projeto Leitura 2">

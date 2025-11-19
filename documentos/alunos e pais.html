@@ -104,11 +104,24 @@
     margin: 20px;
     padding: 15px;
     border-radius: 4px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s;
   }
 
   .info-box strong {
     display: block;
     font-size: 18px;
+  }
+
+  .info-box:hover {
+    background-color: rgb(0, 0, 160);
+    transform: scale(1.03);
+  }
+
+  .info-box:active {
+    background-color: #0000ff;
+    transform: scale(0.97);
   }
 
   .calendar-section {
@@ -187,20 +200,27 @@
 <div class="main-box">
   <h2>Área dos pais e alunos</h2>
 
-  <div class="info-box">
-    <strong>Boletim dos alunos</strong>
-    Acesso a Boletim, Notas, Frequência dos Alunos
-  </div>
+  <!-- agora abre dentro do site -->
+  <a href="boletim.html" style="text-decoration:none;">
+    <div class="info-box">
+      <strong>Boletim dos alunos</strong>
+      Acesso a Boletim, Notas, Frequência dos Alunos
+    </div>
+  </a>
 
-  <div class="info-box">
-    <strong>Comunicados Individuais</strong>
-    Confira Comunicados, avisos específicos para você
-  </div>
+  <a href="comunicados.html" style="text-decoration:none;">
+    <div class="info-box">
+      <strong>Comunicados Individuais</strong>
+      Confira Comunicados, avisos específicos para você
+    </div>
+  </a>
 
-  <div class="info-box">
-    <strong>Downloads</strong>
-    Baixe autorizações, Listas, Formulários e outros Documentos
-  </div>
+  <a href="downloads.html" style="text-decoration:none;">
+    <div class="info-box">
+      <strong>Downloads</strong>
+      Baixe autorizações, Listas, Formulários e outros Documentos
+    </div>
+  </a>
 </div>
 
 <div class="calendar-section">
@@ -213,23 +233,25 @@
 <script>
   const searchInput = document.querySelector(".search input");
 
-  searchInput.addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-      const texto = searchInput.value.toLowerCase();
+  if (searchInput) {
+    searchInput.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        const texto = searchInput.value.toLowerCase();
 
-      if (texto.includes("home")) window.location.href = "paginainicial.html";
-      else if (texto.includes("acad")) window.location.href = "parte academica.html";
-      else if (texto.includes("curso")) window.location.href = "cursos.html";
-      else if (texto.includes("docen")) window.location.href = "docentes.html";
-      else if (texto.includes("projet")) window.location.href = "projetos.html";
-      else if (texto.includes("aluno")) window.location.href = "alunos e pais.html";
-      else if (texto.includes("foto") || texto.includes("vídeo")) window.location.href = "Fotos e Vídeos.html";
-      else if (texto.includes("prem")) window.location.href = "Premiações.html";
-      else if (texto.includes("depo")) window.location.href = "Depoimentos.html";
-      else if (texto.includes("adm")) window.location.href = "Administração.html";
-      else alert("Página não encontrada!");
-    }
-  });
+        if (texto.includes("home")) window.location.href = "paginainicial.html";
+        else if (texto.includes("acad")) window.location.href = "parte academica.html";
+        else if (texto.includes("curso")) window.location.href = "cursos.html";
+        else if (texto.includes("docen")) window.location.href = "docentes.html";
+        else if (texto.includes("projet")) window.location.href = "projetos.html";
+        else if (texto.includes("aluno")) window.location.href = "alunos e pais.html";
+        else if (texto.includes("foto") || texto.includes("vídeo")) window.location.href = "Fotos e Vídeos.html";
+        else if (texto.includes("prem")) window.location.href = "Premiações.html";
+        else if (texto.includes("depo")) window.location.href = "Depoimentos.html";
+        else if (texto.includes("adm")) window.location.href = "Administração.html";
+        else alert("Página não encontrada!");
+      }
+    });
+  }
 </script>
 
 </body>
