@@ -59,6 +59,7 @@
   .enter {
     font-weight: bold;
     font-size: 14px;
+    cursor: pointer;
   }
 
   .menu {
@@ -142,6 +143,69 @@
     border-bottom: 1px solid #000000;
     padding: 5px;
   }
+
+  /* ---- MODAL NOVO ---- */
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal {
+    background-color: #06224d;
+    width: 420px;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: #d9d9d9;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+
+  .modal h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+  }
+
+  .modal p {
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 25px;
+  }
+
+  .barra {
+    width: 100%;
+    height: 6px;
+    background: #b0b8c3;
+    border-radius: 5px;
+    margin: 10px 0 5px 0;
+  }
+
+  .ok-btn {
+    margin-top: 30px;
+    background: transparent;
+    border: 2px solid #b8c2d1;
+    color: #b8c2d1;
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .ok-btn:hover {
+    background-color: #b8c2d1;
+    color: #06224d;
+  }
+
 </style>
 </head>
 <body>
@@ -153,17 +217,14 @@
   </div>
 
   <div class="search">
-    <input 
-      id="barraPesquisa"
-      type="text" 
-      placeholder="🔍 Procurar"
-      onkeyup="pesquisarNoSite()">
+        <input id="searchInput" type="text" placeholder="🔍 Procurar">
   </div>
 
   <div class="right">
     <img src="https://bantleon.de/assets/img/home/Content/Piktogramme/Ikon_6.png?m=1706695927&" alt="Localização">
+
     <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home"></a>
-    <div class="enter">Entrar</div>
+    <div class="enter" onclick="abrirModal()">Entrar</div>
   </div>
 </div>
 
@@ -283,30 +344,61 @@
   </div>
 </div>
 
+<!-- MODAL NOVO COLADO AQUI -->
+
+<div id="modalOverlay" class="overlay" style="display: none;">
+  <div class="modal" role="dialog" aria-modal="true">
+    <h1>EM<br>CONSTRUÇÃO</h1>
+    <p>Esta ferramenta está quase pronta</p>
+
+    <div class="barra"></div>
+
+    <button class="ok-btn" onclick="fecharModal()">OK</button>
+  </div>
+</div>
 
 <script>
-function pesquisarNoSite() {
-  let termo = document.getElementById("barraPesquisa").value.toLowerCase().trim();
-  if (termo === "") return;
 
-  let elementos = document.querySelectorAll("body *:not(script):not(style)");
+  /* ---------------- BUSCA POR PALAVRAS-CHAVE ---------------- */
 
-  let achou = false;
+  const searchInput = document.getElementById("searchInput");
 
-  elementos.forEach(el => {
-    if (el.innerText && el.innerText.toLowerCase().includes(termo)) {
+  searchInput.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      const texto = searchInput.value.toLowerCase();
 
-      if (!achou) {
-        el.scrollIntoView({ behavior: "smooth", block: "center" });
-        achou = true;
-      }
-
-      el.style.backgroundColor = "yellow";
-      setTimeout(() => el.style.backgroundColor = "", 2000);
+      if (texto.includes("home")) window.location.href = "paginainicial.html";
+      else if (texto.includes("acad")) window.location.href = "parte academica.html";
+      else if (texto.includes("curso")) window.location.href = "cursos.html";
+      else if (texto.includes("docen")) window.location.href = "docentes.html";
+      else if (texto.includes("projet")) window.location.href = "projetos.html";
+      else if (texto.includes("aluno")) window.location.href = "alunos e pais.html";
+      else if (texto.includes("foto") || texto.includes("vídeo")) window.location.href = "Fotos e Vídeos.html";
+      else if (texto.includes("prem")) window.location.href = "Premiações.html";
+      else if (texto.includes("depo")) window.location.href = "Depoimentos.html";
+      else if (texto.includes("adm")) window.location.href = "Administração.html";
+      else alert("Página não encontrada!");
     }
   });
-}
-</script>
 
-</body>
-</html>
+  /* ------------------- MODAL ------------------- */
+
+  function abrirModal() {
+    document.getElementById("modalOverlay").style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  function fecharModal() {
+    document.getElementById("modalOverlay").style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') fecharModal();
+  });
+
+  document.getElementById('modalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) fecharModal();
+  });
+
+</script>

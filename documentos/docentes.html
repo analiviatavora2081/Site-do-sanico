@@ -109,6 +109,68 @@
     display: block;
     color: #000;
   }
+
+  /* --------- MODAL NOVO ---------- */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal {
+    background-color: #06224d;
+    width: 420px;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: #d9d9d9;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+
+  .modal h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+  }
+
+  .modal p {
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 25px;
+  }
+
+  .barra {
+    width: 100%;
+    height: 6px;
+    background: #b0b8c3;
+    border-radius: 5px;
+    margin: 10px 0 5px 0;
+  }
+
+  .ok-btn {
+    margin-top: 30px;
+    background: transparent;
+    border: 2px solid #b8c2d1;
+    color: #b8c2d1;
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .ok-btn:hover {
+    background-color: #b8c2d1;
+    color: #06224d;
+  }
+  /* --------- FIM DO MODAL ---------- */
 </style>
 </head>
 <body>
@@ -126,12 +188,28 @@
   <div class="right">
     <img src="https://bantleon.de/assets/img/home/Content/Piktogramme/Ikon_6.png?m=1706695927&" alt="Localização" width="30">
     <img src="https://ohioline.osu.edu/sites/ohioline/files/imce/Agriculture_and_Natural_Resources/HYG-5815-Figure2_2.jpg" alt="Home" width="30">
-    <div><strong>Entrar</strong></div>
+
+    <!-- ★ BOTÃO ENTRAR FORMATADO ★ -->
+    <button class="enter" onclick="abrirModal()" style="
+        background-color: transparent;
+        border: none;
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      ">
+        <height="20" alt="">
+        Entrar
+      </button>
+
   </div>
 </div>
 
 <div class="menu">
-   <a href="paginainicial.html">Home</a>
+  <a href="paginainicial.html">Home</a>
   <a href="parte academica.html">Área Acadêmica</a>
   <a href="cursos.html">Cursos</a>
   <a href="docentes.html">Docentes</a>
@@ -148,17 +226,15 @@
 <div class="docentes-container">
   <div class="prof-card">
     <div class="prof-info">
-      <strong>Nome:Camila</strong>
-      <strong>Matéria:Química 
-        Praticas Esperimentais
-      </strong>
+      <strong>Nome: Camila</strong>
+      <strong>Matéria: Química / Práticas Experimentais</strong>
     </div>
   </div>
 
   <div class="prof-card">
     <div class="prof-info">
-      <strong>Nome:Fernanda Gerra</strong>
-      <strong>Matéria:Portugues </strong>
+      <strong>Nome: Fernanda Guerra</strong>
+      <strong>Matéria: Português</strong>
     </div>
   </div>
 
@@ -191,26 +267,26 @@
   </div>
 </div>
 
+<!-- ★ MODAL ★ -->
+<div id="modalOverlay" class="overlay">
+  <div class="modal">
+    <h1>EM<br>CONSTRUÇÃO</h1>
+    <p>Esta ferramenta está quase pronta</p>
+    <div class="barra"></div>
+    <button class="ok-btn" onclick="fecharModal()">OK</button>
+  </div>
+</div>
+
 <script>
-  const searchInput = document.querySelector(".search input");
+function abrirModal() {
+  document.getElementById("modalOverlay").style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
 
-  searchInput.addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-      const texto = searchInput.value.toLowerCase();
-
-      if (texto.includes("home")) window.location.href = "paginainicial.html";
-      else if (texto.includes("acad")) window.location.href = "parte academica.html";
-      else if (texto.includes("curso")) window.location.href = "cursos.html";
-      else if (texto.includes("docen")) window.location.href = "docentes.html";
-      else if (texto.includes("projet")) window.location.href = "projetos.html";
-      else if (texto.includes("aluno")) window.location.href = "alunos e pais.html";
-      else if (texto.includes("foto") || texto.includes("vídeo")) window.location.href = "Fotos e Vídeos.html";
-      else if (texto.includes("prem")) window.location.href = "Premiações.html";
-      else if (texto.includes("depo")) window.location.href = "Depoimentos.html";
-      else if (texto.includes("adm")) window.location.href = "Administração.html";
-      else alert("Página não encontrada!");
-    }
-  });
+function fecharModal() {
+  document.getElementById("modalOverlay").style.display = "none";
+  document.body.style.overflow = "";
+}
 </script>
 
 </body>

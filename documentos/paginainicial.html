@@ -59,6 +59,7 @@
   .enter {
     font-weight: bold;
     font-size: 14px;
+    cursor: pointer; /* transforma em botão visualmente */
   }
 
   .menu {
@@ -112,6 +113,68 @@
     width: 250px;
     height: 190px;
   }
+
+  /* --- Estilos do Modal (adicionados) --- */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal {
+    background-color: #06224d;
+    width: 420px;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: #d9d9d9;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+
+  .modal h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+  }
+
+  .modal p {
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 25px;
+  }
+
+  .barra {
+    width: 100%;
+    height: 6px;
+    background: #b0b8c3;
+    border-radius: 5px;
+    margin: 10px 0 5px 0;
+  }
+
+  .ok-btn {
+    margin-top: 30px;
+    background: transparent;
+    border: 2px solid #b8c2d1;
+    color: #b8c2d1;
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .ok-btn:hover {
+    background-color: #b8c2d1;
+    color: #06224d;
+  }
+  /* --- fim estilos do Modal --- */
 </style>
 </head>
 <body>
@@ -129,7 +192,8 @@
   <div class="right">
     <img src="https://bantleon.de/assets/img/home/Content/Piktogramme/Ikon_6.png?m=1706695927&" alt="Localização">
     <img src="https://ohioline.osu.edu/sites/ohioline/files/imce/Agriculture_and_Natural_Resources/HYG-5815-Figure2_2.jpg" alt="Home">
-    <div class="enter">Entrar</div>
+    <!-- ADICIONADO onclick para abrir o modal -->
+    <div class="enter" onclick="abrirModal()">Entrar</div>
   </div>
 </div>
 
@@ -186,6 +250,18 @@
   </div>
 </div>
 
+<!-- Modal de Em Construção (colado no final do body) -->
+<div id="modalOverlay" class="overlay" style="display: none;">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h1 id="modalTitle">EM<br>CONSTRUÇÃO</h1>
+    <p>Esta ferramenra está quase pronta </p>
+
+    <div class="barra"></div>
+
+    <button class="ok-btn" onclick="fecharModal()">OK</button>
+  </div>
+</div>
+
 <script>
   const searchInput = document.getElementById("searchInput");
 
@@ -204,6 +280,31 @@
       else if (texto.includes("depo")) window.location.href = "Depoimentos.html";
       else if (texto.includes("adm")) window.location.href = "Administração.html";
       else alert("Página não encontrada!");
+    }
+  });
+
+  function abrirModal() {
+    document.getElementById("modalOverlay").style.display = "flex";
+    // opcional: bloquear scroll do body enquanto o modal estiver aberto
+    document.body.style.overflow = "hidden";
+  }
+
+  function fecharModal() {
+    document.getElementById("modalOverlay").style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  // fechar com ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      fecharModal();
+    }
+  });
+
+  // fechar clicando fora do modal
+  document.getElementById('modalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) {
+      fecharModal();
     }
   });
 </script>
